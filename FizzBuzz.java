@@ -1,28 +1,24 @@
 //Ameer Ahmed
 
-//Create a function that takes a number as an argument and returns "Fizz", "Buzz" or "FizzBuzz".
-
-public class Program {
+public class fizzBuzz {
     public static String fizzBuzz(int n) {
-        String output = "";
-            if(n % 15 == 0){
-                System.out.println("FizzBuzz");
-            }
-            else if(n % 3 == 0) {
-                System.out.println("Fizz");
-            }
-            else if(n % 5 == 0) {
-                System.out.println("Buzz");
-            }
-            else {
-                return Integer.toString(n);
-            }
-        return output;
-    }
-        public static void main (String[] args){
-            fizzBuzz(15);
-            fizzBuzz(3);
-            fizzBuzz(5);
-            fizzBuzz(2);
+
+        if(n % 3 == 0 && n % 5 == 0) {
+            return "FizzBuzz";
         }
+
+        else if(n % 3 == 0) {
+            return "Fizz";
+        }
+        else if(n % 5 == 0) {
+            return "Buzz";
+        }
+            return n + "";
     }
+    public static void main (String[] args) {
+        System.out.println(fizzBuzz(3));
+        System.out.println(fizzBuzz(5));
+        System.out.println(fizzBuzz(15));
+        System.out.println(fizzBuzz(4));
+    }
+}
